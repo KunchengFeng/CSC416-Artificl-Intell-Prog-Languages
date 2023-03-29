@@ -1,0 +1,26 @@
+; File :- two-calculators.txt
+; This file holds the code for csc 416 assignment 04 task 4 & 5
+
+(defun calculator-lr (&aux val-1 val-2 val-3 op-1 op-2 temp result)
+	(format t "Expression? ")
+	(setf val-1 (read))
+	(setf op-1 (read))
+	(setf val-2 (read))
+	(setf op-2 (read))
+	(setf val-3 (read))
+	(setf temp (apply op-1 (list val-1 val-2)))
+	(setf result (apply op-2 (list temp val-3)))
+	(format t "Result: ~A~%" result)
+	(calculator-lr))
+
+(defun calculator-rl (&aux val-1 val-2 val-3 op-1 op-2 temp result)
+	(format t "Expression? ")
+	(setf val-1 (read))
+	(setf op-1 (read))
+	(setf val-2 (read))
+	(setf op-2 (read))
+	(setf val-3 (read))
+	(setf temp (funcall op-2 val-2 val-3))
+	(setf result (funcall op-1 val-1 temp))
+	(format t "Result: ~A~%" result)
+	(calculator-rl))

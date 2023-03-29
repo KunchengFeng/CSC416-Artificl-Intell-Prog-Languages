@@ -1,0 +1,18 @@
+; Facts:
+	(setf die_edge 3.25)
+	(setf die_sides 6)
+	(setf dot_diameter (/ die_edge 5))
+	(setf dot_nums (+ 1 2 3 4 5 6))
+
+; Deduction on Die:
+	(setf die_side_area (* die_edge die_edge))
+	(setf die_surface_area (* die_side_area die_sides))
+
+; Deduction on Dot:
+	(setf dot_radius (/ dot_diameter 2))
+	(setf dot_area (* pi (* dot_radius dot_radius)))
+	(setf dot_area_total (* dot_area dot_nums))
+
+; Final Calculation:
+	(setf white_area (- die_surface_area dot_area_total))
+	(setf percent_white (* (/ white_area die_surface_area) 100))

@@ -1,0 +1,43 @@
+; File: quarto.txt
+; This file holds the code for csc 416 assignment 04 task 6
+
+; Size :- Big / Small
+; Color :- Red / Blue
+; Style :- Hollow / Solid
+; Shape :- Circle / Square
+
+; Big reds
+(setf (symbol-plist 'brhc) '(size big color red style hollow shape circle))
+(setf (symbol-plist 'brhs) '(size big color red style hollow shape square))
+(setf (symbol-plist 'brsc) '(size big color red style solid shape circle))
+(setf (symbol-plist 'brss) '(size big color red style solid shape square))
+
+; Big blues
+(setf (symbol-plist 'bbhc) '(size big color blue style hollow shape circle))
+(setf (symbol-plist 'bbhs) '(size big color blue style hollow shape square))
+(setf (symbol-plist 'bbsc) '(size big color blue style solid shape circle))
+(setf (symbol-plist 'bbss) '(size big color blue style solid shape square))
+
+; Small reds
+(setf (symbol-plist 'srhc) '(size small color red style hollow shape circle))
+(setf (symbol-plist 'srhs) '(size small color red style hollow shape square))
+(setf (symbol-plist 'srsc) '(size small color red style solid shape circle))
+(setf (symbol-plist 'srss) '(size small color red style solid shape square))
+
+; Small blues
+(setf (symbol-plist 'sbhc) '(size small color blue style hollow shape circle))
+(setf (symbol-plist 'sbhs) '(size small color blue style hollow shape square))
+(setf (symbol-plist 'sbsc) '(size small color blue style solid shape circle))
+(setf (symbol-plist 'sbss) '(size small color blue style solid shape square))
+
+(setf *pieces* '(brhc brhs brsc brss bbhc bbhs bbsc bbss srhc srhs srsc srss sbhc sbhs sbsc sbss))
+
+(defun display-random-piece (&aux number name size color style shape)
+	(setf number (random (length *pieces*)))
+	(setf name (nth number *pieces*))
+	(setf size (get name 'size))
+	(setf color (get name 'color))
+	(setf style (get name 'style))
+	(setf shape (get name 'shape))
+	(list name size color style shape)
+)

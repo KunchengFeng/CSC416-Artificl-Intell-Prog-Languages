@@ -1,0 +1,23 @@
+h1 {
+	margin-left: 1%;
+}
+
+h2 {
+	margin-left: 2%;
+}
+
+h3 {
+	margin-left: 3%;
+}
+
+p {
+	margin-left: 1%;
+}
+
+div {
+	border-style:  ridge inset hidden ridge;
+}
+
+body {
+	font-size: large;
+}

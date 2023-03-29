@@ -1,0 +1,9 @@
+; Facts:
+	(setf rope 88)
+	(setf barn_length 62)
+	(setf barn_width 44)
+
+; Calculations:
+	(setf barn_area (* barn_length barn_width))
+	(setf rope_area (* pi rope rope))
+	(setf graze_area (- rope_area barn_area))

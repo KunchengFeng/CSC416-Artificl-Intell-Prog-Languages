@@ -1,0 +1,17 @@
+[46]> (demo--hand-rep)
+((6 . CLUB) (3 . HEART) (10 . SPADE)) --> ((6 . C) (3 . H) (X . S))
+NIL
+[47]> (demo--hand-rep)
+((ACE . DIAMOND) (4 . CLUB) (2 . CLUB)) --> ((A . D) (4 . C) (2 . C))
+NIL
+[48]> (demo--hand-rep)
+((7 . HEART) (5 . DIAMOND) (4 . HEART)) --> ((7 . H) (5 . D) (4 . H))
+NIL
+[49]> (demo--hand-rep)
+((JACK . SPADE) (9 . HEART) (8 . HEART)) --> ((J . S) (9 . H) (8 . H))
+NIL
+[50]> (demo--hand-rep)
+((5 . DIAMOND) (ACE . CLUB) (8 . DIAMOND)) --> ((5 . D) (A . C) (8 . D))
+NIL
+[51]> (demo--hand-rep)
+((KING . HEART) (ACE . DIAMOND) (QUEEN . DIAMOND)) --> ((K . H) (A . D) (Q . D))

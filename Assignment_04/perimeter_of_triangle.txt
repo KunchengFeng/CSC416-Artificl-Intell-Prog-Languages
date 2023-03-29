@@ -1,0 +1,18 @@
+; File: perimeter_of_triangle.txt
+; This file holds the code for CSC 416 Assignment 04 Tasks 2 & 3
+
+; Point1 :- (x1, y1)
+; Point2 :- (x2, y2)
+(defun distance (x1 y1 x2 y2 &aux diff-x diff-y distance)
+	(setf diff-x (- x2 x1))
+	(setf diff-y (- y2 y1))
+	(setf distance (sqrt (+ (expt diff-x 2) (expt diff-y 2))))
+	distance)
+
+; Point3 :- (x3, y3)
+(defun perimeter (x1 y1 x2 y2 x3 y3 &aux d1 d2 d3 perimeter)
+	(setf d1 (distance x1 y1 x2 y2))
+	(setf d2 (distance x1 y1 x3 y3))
+	(setf d3 (distance x2 y2 x3 y3))
+	(setf perimeter (+ d1 d2 d3))
+	perimeter)
